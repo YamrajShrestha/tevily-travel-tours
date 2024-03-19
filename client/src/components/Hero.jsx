@@ -1,5 +1,6 @@
 import React from "react";
-import '../css/Hero.css'
+import { Link } from "react-router-dom";
+import "../css/Hero.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -43,7 +44,31 @@ const Hero = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      
+      <div className="tour-search-box">
+        <div className="search-fields">
+          <div className="field">
+            <label>Where to</label>
+            <input type="text" placeholder="Enter keywords" />
+          </div>
+          <div className="field">
+            <label>When</label>
+            <input type="date" defaultValue="2024-03-19" />
+          </div>
+          <div className="field">
+            <label>Type</label>
+            <select>
+              <option value="adventure" selected>
+                Adventure
+              </option>
+              <option value="wildlife">Wildlife</option>
+              <option value="sightseeing">Sightseeing</option>
+            </select>
+          </div>
+          <div className="find-now">
+            <button>FIND NOW</button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
